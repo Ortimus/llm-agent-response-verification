@@ -13,7 +13,20 @@ It focuses on schema validation, evaluator-driven refinement loops, and human-in
 
 - '.env' file - Optional
 
-Expects OPENAI_API_KEY or GROQ_API_KEY or uses simulation mode
+Before running the project, if you want to call OpenAI or Groq, please ensure you have a .env file in your project root with the appropriate  key:
+
+```.env
+OPENAI_API_KEY=<your OpenAI API Key>
+
+or
+
+GROQ_API_KEY=<your GROQ API Key>
+```
+
+Note: Never commit your .env file or API keys to version control.
+
+If there is no .env file or none of these keys are defined, the code should run in simulation mode.
+
 
 ## Quick start
 
@@ -27,12 +40,6 @@ pip install -r requirements.txt
 
 4. Open notebooks in Jupyter or VSCode.
 5. Note: I have checked in the llm-env folder, so you can source that and use it instead of creating your own virtual env.
-
-To run live OpenAI examples, set your OPENAI_API_KEY in .env
-
-To run live Groq examples, set your GROQ_API_KEY in .env
-
-If there is no .env file or none of these keys are defined, the code should run in simulation mode.
 
 
 

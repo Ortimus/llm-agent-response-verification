@@ -1,17 +1,14 @@
-# LLM Agent Evaluation Patterns — Response Verification
+# LLM Agent Response  Verification
 
-This repository contains notebooks, examples, and utilities demonstrating practical patterns for **verifying LLM agent outputs**.
-It focuses on schema validation, evaluator-driven refinement loops, and human-in-the-loop escalation with realistic examples using Groq.
+This repository contains notebooks demonstrating practical patterns for **verifying LLM agent outputs**.
+It focuses on schema validation, evaluator-driven refinement loops, and human-in-the-loop escalation with realistic examples.
 
 ## Contents
 
 - `notebooks/`
-  - `Master_Agent_Verification_Groq.ipynb` — Master notebook with Groq-powered examples and explanatory text.
-  - `Agent_Response_Validation.ipynb` — Focused notebook with JSON Schema, Pydantic retry loop, and evaluator-driven correction examples.
-- `images/`
-  - `evaluator_loop.png` — Diagram showing the evaluator→refinement loop.
-- `examples/` — Lightweight example scripts for quick reference.
-- `utils/` — Helper modules (Groq client wrapper, evaluator helpers).
+  - `agent_response_verification.ipynb` — Master notebook with OpenAI/Groq-powered examples and explanatory text. Can be run in simulation mode too.
+  - `schema_validation_comparison` — Focused notebook with Pydantic and JSON Schema validation examples.
+
 - `requirements.txt` — Python dependencies.
 
 ## Quick start
@@ -24,12 +21,13 @@ It focuses on schema validation, evaluator-driven refinement loops, and human-in
 pip install -r requirements.txt
 ```
 
-4. Open notebooks in Jupyter or VSCode. To run live Groq examples, set your Groq API key:
+4. Open notebooks in Jupyter or VSCode. 
 
-```python
-from utils.groq_client import make_groq_client
-client = make_groq_client("YOUR_GROQ_API_KEY")
-```
+To run live OpenAI examples, set your OPENAI_API_KEY in .env
+To run live Groq examples, set your GROQ_API_KEY in .env
+If there is no .env file or none of these keys are defined, the code should run in simulation mode.
+
+
 
 ## Notebooks
 
@@ -41,4 +39,3 @@ MIT License — see `LICENSE` file.
 
 ---
 
-*Created by Sumitro Palit — inspired by applied AI evaluation research.*

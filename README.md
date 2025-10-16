@@ -11,6 +11,10 @@ It focuses on schema validation, evaluator-driven refinement loops, and human-in
 
 - `requirements.txt` — Python dependencies.
 
+- '.env' file - Optional
+
+Expects OPENAI_API_KEY or GROQ_API_KEY or uses simulation mode
+
 ## Quick start
 
 1. Clone or download the repository.
@@ -21,17 +25,21 @@ It focuses on schema validation, evaluator-driven refinement loops, and human-in
 pip install -r requirements.txt
 ```
 
-4. Open notebooks in Jupyter or VSCode. 
+4. Open notebooks in Jupyter or VSCode.
+5. Note: I have checked in the llm-env folder, so you can source that and use it instead of creating your own virtual env.
 
 To run live OpenAI examples, set your OPENAI_API_KEY in .env
+
 To run live Groq examples, set your GROQ_API_KEY in .env
+
 If there is no .env file or none of these keys are defined, the code should run in simulation mode.
 
 
 
 ## Notebooks
 
-- The notebooks include both **simulated runs** (so you can see behavior without an API key) and **live-capable code** for Groq. Replace the placeholder API key and run cells to execute live.
+- The notebooks include both **simulated runs** (so you can see behavior without an API key) and **live-capable code** for OpenAI or Groq.
+- Populate the appropriate  API key in the .env file and run cells to execute live.
 
 ## License
 
